@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Arita-dotum';
+  src: url('/fonts/Arita-Dotum-Light.woff2') format('woff2'),
+       local('Arita-dotum-Light'), local('AritaDotumLight'), local('아리따 돋움 Light');
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arita-dotum';
+  src: url('/fonts/Arita-Dotum-Medium.woff2') format('woff2'),
+       local('Arita-dotum-Medium'), local('AritaDotumMedium'), local('아리따 돋움 Medium');
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arita-dotum';
+  src: url('/fonts/Arita-Dotum-SemiBold.woff2') format('woff2'),
+       local('Arita-dotum-SemiBold'), local('AritaDotumSemiBold'), local('아리따 돋움 SemiBold');
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Arita-dotum';
+  src: url('/fonts/Arita-Dotum-Bold.woff2') format('woff2'),
+       local('Arita-dotum-Bold'), local('AritaDotumBold'), local('아리따 돋움 Bold');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@theme {
+  /* Color Palette - Heroines Inspired */
+  --color-coral: #ff6b6b;
+  --color-coral-dark: #e85d5d;
+  --color-pink: #ffb3ba;
+  --color-purple: #7c5cdb;
+  --color-purple-light: #9580e8;
+  --color-lavender: #a78bfa;
+  
+  /* Typography */
+  --font-sans: "Arita-dotum", "아리따 돋움", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h4 {
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+p {
+  line-height: 1.7;
+}
+
+button {
+  font-family: inherit;
+}
