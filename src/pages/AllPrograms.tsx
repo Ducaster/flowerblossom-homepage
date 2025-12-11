@@ -80,6 +80,16 @@ const allPrograms = [
 export function AllPrograms() {
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#fce4d6' }}>
+      {/* 로고 */}
+      <div style={{ padding: '20px 24px' }}>
+        <Link 
+          to="/"
+          className="text-2xl font-semibold text-gray-900 hover:text-[#8080e0] transition-colors"
+        >
+          꽃보나보
+        </Link>
+      </div>
+
       {/* 모바일/태블릿 헤더 */}
       <div className="lg:hidden">
         {/* 이미지 - 전체 너비 */}
