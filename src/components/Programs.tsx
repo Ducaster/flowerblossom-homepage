@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 const currentPrograms = [
   {
@@ -25,6 +26,21 @@ const currentPrograms = [
 ];
 
 export function Programs() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      // iOS Safari 및 대부분의 모바일 브라우저에서 background-attachment: fixed가 작동하지 않음
+      const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+      const isSmallScreen = window.innerWidth < 1024;
+      setIsMobile(isTouchDevice || isSmallScreen);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <section id="programs" className="py-0">
       <div className="grid md:grid-cols-2">
@@ -71,10 +87,10 @@ export function Programs() {
         </div>
 
         <div 
-          className="relative h-[500px] md:h-[700px] order-1 md:order-2 bg-fixed bg-cover bg-center"
+          className="relative h-[500px] md:h-[700px] order-1 md:order-2 bg-cover bg-center"
           style={{
             backgroundImage: `url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&auto=format&fit=crop&q=80')`,
-            backgroundAttachment: 'fixed'
+            backgroundAttachment: isMobile ? 'scroll' : 'fixed'
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
