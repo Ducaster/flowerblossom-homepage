@@ -26,6 +26,9 @@ export function Header() {
   const menuVisibility = isScrolled
     ? '-translate-y-6 opacity-0 pointer-events-none'
     : 'translate-y-0 opacity-100';
+  const textShadowStyle = isScrolled 
+    ? {} 
+    : { textShadow: '1px 1px 2px rgba(120,120,120,0.25), -1px -1px 2px rgba(120,120,120,0.25), 1px -1px 2px rgba(120,120,120,0.25), -1px 1px 2px rgba(120,120,120,0.25)' };
 
   return (
     <header
@@ -33,7 +36,7 @@ export function Header() {
     >
       <div 
         className="w-full"
-        style={{ paddingLeft: '8%', paddingRight: '8%' }}
+        style={{ paddingLeft: '5%', paddingRight: '8%' }}
       >
         <div
           className={`flex justify-between items-center transition-all duration-500 ${
@@ -42,9 +45,13 @@ export function Header() {
         >
           <button
             onClick={() => scrollToSection('hero')}
-            className={`text-2xl tracking-tight transition-colors duration-300 font-semibold ${textTone}`}
+            className="transition-all duration-300"
           >
-            꽃보나보
+            <img 
+              src="/logo.png" 
+              alt="꽃보나보" 
+              className={`transition-all duration-300 ${isScrolled ? 'h-7' : 'h-9'}`}
+            />
           </button>
 
           <nav
@@ -53,24 +60,28 @@ export function Header() {
             <button
               onClick={() => scrollToSection('mission')}
               className={`${textTone} hover:text-[#ff6b6b] transition-colors uppercase text-[15px] tracking-wide`}
+              style={textShadowStyle}
             >
               Mission
             </button>
             <button
               onClick={() => scrollToSection('programs')}
               className={`${textTone} hover:text-[#ff6b6b] transition-colors uppercase text-[15px] tracking-wide`}
+              style={textShadowStyle}
             >
               Programs
             </button>
             <Link
               to="/programs"
               className={`${textTone} hover:text-[#ff6b6b] transition-colors uppercase text-[15px] tracking-wide`}
+              style={textShadowStyle}
             >
               History
             </Link>
             <button
               onClick={() => scrollToSection('getinvolved')}
               className={`${textTone} hover:text-[#ff6b6b] transition-colors uppercase text-[15px] tracking-wide`}
+              style={textShadowStyle}
             >
               Get Involved
             </button>
@@ -89,24 +100,28 @@ export function Header() {
             <button
               onClick={() => scrollToSection('mission')}
               className="block w-full text-left py-3 text-white hover:text-[#ff6b6b] transition-colors uppercase text-[15px] tracking-wide"
+              style={textShadowStyle}
             >
               Mission
             </button>
             <button
               onClick={() => scrollToSection('programs')}
               className="block w-full text-left py-3 text-white hover:text-[#ff6b6b] transition-colors uppercase text-[15px] tracking-wide"
+              style={textShadowStyle}
             >
               Programs
             </button>
             <Link
               to="/programs"
               className="block w-full text-left py-3 text-white hover:text-[#ff6b6b] transition-colors uppercase text-[15px] tracking-wide"
+              style={textShadowStyle}
             >
               History
             </Link>
             <button
               onClick={() => scrollToSection('getinvolved')}
               className="block w-full text-left py-3 text-white hover:text-[#ff6b6b] transition-colors uppercase text-[15px] tracking-wide"
+              style={textShadowStyle}
             >
               Get Involved
             </button>

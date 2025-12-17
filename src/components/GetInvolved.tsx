@@ -1,27 +1,30 @@
-import { Users, BookOpen, Calendar } from "lucide-react";
+import { User, Flower2, MessageCircle } from "lucide-react";
 
 export function GetInvolved() {
   const ways = [
     {
-      icon: Users,
-      title: "1:1 코칭 신청",
+      icon: User,
+      title: "마인드 프로필",
       description:
-        "전문 코치와 함께 나만의 성장 여정을 시작하세요. 목표 설정부터 실행까지 체계적으로 지원합니다.",
-      cta: "신청하기",
+        "나의 감정, 마음, 성향 등 6회차에 걸쳐 나의 내적 프로필을 찍어보는 시간",
+      cta: "시작하기",
+      link: null,
     },
     {
-      icon: BookOpen,
-      title: "인터뷰 참여",
+      icon: Flower2,
+      title: "인마인드",
       description:
-        "당신의 진솔한 이야기를 매거진에 담아보세요. 누군가에게 큰 힘이 될 수 있습니다.",
+        "나와 가장 어울리는 꽃은 무엇일까? 9가지 유형으로 알아보는 나의 간단 성향 검사",
+      cta: "검사하기",
+      link: "https://flowerblossom-survey.vercel.app/",
+    },
+    {
+      icon: MessageCircle,
+      title: "Q&A",
+      description:
+        "평범하다고 생각했던 일상 이야기가 누군가의 공감을 이끌어냅니다. 당신의 이야기를 들려주세요.",
       cta: "참여하기",
-    },
-    {
-      icon: Calendar,
-      title: "행사 참여",
-      description:
-        "워크숍, 토크콘서트, 소모임 등 다양한 행사에 참여하여 새로운 사람들을 만나보세요.",
-      cta: "일정 보기",
+      link: null,
     },
   ];
 
@@ -52,9 +55,20 @@ export function GetInvolved() {
                 </p>
 
                 <div>
-                  <button className="uppercase text-sm font-bold tracking-[0.2em] py-3 border-b-2 border-white/30 hover:border-white transition-all text-white/90 hover:text-white">
-                    {way.cta}
-                  </button>
+                  {way.link ? (
+                    <a 
+                      href={way.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="uppercase text-sm font-bold tracking-[0.2em] py-3 border-b-2 border-white/30 hover:border-white transition-all text-white/90 hover:text-white"
+                    >
+                      {way.cta}
+                    </a>
+                  ) : (
+                    <button className="uppercase text-sm font-bold tracking-[0.2em] py-3 border-b-2 border-white/30 hover:border-white transition-all text-white/90 hover:text-white">
+                      {way.cta}
+                    </button>
+                  )}
                 </div>
               </div>
             );

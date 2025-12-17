@@ -1,27 +1,23 @@
-import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 const currentPrograms = [
   {
-    id: 2,
-    date: '상시 모집',
-    title: '1:1 마인드 코칭',
-    description: '나를 알아보고 목표를 세우는 개인 맞춤형 코칭 프로그램',
-    tag: 'Coaching',
+    date: '상시모집',
+    tag: 'MIND PROFILE',
+    title: '마인드 프로필',
+    description: '나의 감정, 마음, 성향 등 6회차에 걸쳐 나의 내적 프로필을 찍어보는 시간',
   },
   {
-    id: 1,
-    date: '2025년 1월',
-    title: '청년 토크콘서트',
-    description: '20대의 고민과 꿈을 함께 나누며 마음을 단단하게 만드는 저녁',
-    tag: 'Community',
+    date: '상시모집',
+    tag: 'IN-MIND',
+    title: '인마인드',
+    description: '나와 가장 어울리는 꽃은 무엇일까? 9가지 유형으로 알아보는 나의 간단 성향 검사',
   },
   {
-    id: 3,
-    date: '2025년 2월',
-    title: '매거진 인터뷰',
-    description: '당신의 이야기를 기록하고 전할 수 있도록 따뜻하게 인터뷰합니다',
-    tag: 'Story',
+    date: '상시모집',
+    tag: 'Q&A',
+    title: '매거진 Q&A',
+    description: '평범하다고 생각했던 일상 이야기가 누군가의 공감을 이끌어냅니다. 당신의 이야기를 들려주세요.',
   },
 ];
 
@@ -59,31 +55,23 @@ export function Programs() {
           </h2>
 
           <div className="border-t border-gray-300/50">
-            {currentPrograms.map((item) => (
-              <Link
-                key={item.id}
-                to={`/programs/${item.id}`}
-                className="block group cursor-pointer transition-all duration-300 border-b border-gray-300/50"
+            {currentPrograms.map((item, index) => (
+              <div
+                key={index}
+                className="border-b border-gray-300/50"
                 style={{ padding: '16px 0' }}
               >
                 <div className="flex items-center gap-4" style={{ marginBottom: '4px' }}>
                   <span className="text-sm text-gray-500">{item.date}</span>
                   <span className="text-xs uppercase tracking-wider text-gray-400">{item.tag}</span>
                 </div>
-                <h3 className="text-lg md:text-xl font-semibold text-gray-900 group-hover:text-[#8080e0] transition-colors" style={{ marginBottom: '4px' }}>
+                <h3 className="text-lg md:text-xl font-semibold text-gray-900" style={{ marginBottom: '4px' }}>
                   {item.title}
                 </h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
-              </Link>
+              </div>
             ))}
           </div>
-
-          <Link
-            to="/programs"
-            className="mt-8 underline underline-offset-4 hover:text-[#8080e0] transition-colors font-medium text-gray-700"
-          >
-            모든 프로그램 보기 →
-          </Link>
         </div>
 
         <div 

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { ArrowLeft, Instagram, Youtube, Facebook, Twitter, Mail, Send, MapPin, Calendar } from 'lucide-react';
+import { ArrowLeft, Instagram, Facebook, Twitter, Send, MapPin, Calendar } from 'lucide-react';
 
 const allPrograms = [
   {
@@ -236,11 +236,8 @@ export function ProgramDetail() {
     <div className="min-h-screen" style={{ backgroundColor: '#fce4d6' }}>
       {/* 로고 */}
       <div style={{ padding: '20px 24px' }}>
-        <Link 
-          to="/"
-          className="text-2xl font-semibold text-gray-900 hover:text-[#8080e0] transition-colors"
-        >
-          꽃보나보
+        <Link to="/" className="transition-colors">
+          <img src="/logo.png" alt="꽃보나보" className="h-12" />
         </Link>
       </div>
       
@@ -364,7 +361,7 @@ function NewsletterSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert('뉴스레터 구독이 완료되었습니다!');
+    alert('아직 서비스 준비중입니다');
     setEmail('');
   };
 
@@ -375,13 +372,13 @@ function NewsletterSection() {
     >
       <div style={{ maxWidth: '600px', margin: '0 auto', padding: '0 24px', textAlign: 'center' }}>
         <h2 className="text-2xl md:text-3xl" style={{ marginBottom: '40px' }}>
-          꽃보나보의 소식을 받아보세요
+          꽃보나보의 소식을 받아보세요 <span className="text-gray-400">(준비중)</span>
         </h2>
         
         <form 
           onSubmit={handleSubmit} 
           style={{ 
-            marginBottom: '50px',
+            marginBottom: '30px',
             display: 'flex',
             overflow: 'hidden',
             border: '1px solid #3a3a3a',
@@ -424,28 +421,10 @@ function NewsletterSection() {
           </button>
         </form>
 
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
+        <div className="flex justify-center">
           <Link to="/" className="text-gray-400 hover:text-white transition-colors text-sm tracking-wide">
             홈으로 돌아가기
           </Link>
-          
-          <div className="flex items-center gap-5">
-            <a href="mailto:contact@kkotbonabo.com" className="text-gray-400 hover:text-[#8080e0] transition-colors">
-              <Mail className="w-5 h-5" />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-[#8080e0] transition-colors">
-              <Twitter className="w-5 h-5" />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-[#8080e0] transition-colors">
-              <Facebook className="w-5 h-5" />
-            </a>
-            <a href="#" className="text-gray-400 hover:text-[#8080e0] transition-colors">
-              <Youtube className="w-5 h-5" />
-            </a>
-            <a href="https://instagram.com/kkotbonabo" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#8080e0] transition-colors">
-              <Instagram className="w-5 h-5" />
-            </a>
-          </div>
         </div>
       </div>
     </section>

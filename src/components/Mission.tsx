@@ -4,7 +4,7 @@ export function Mission() {
       <div className="grid md:grid-cols-2">
         <div className="relative h-[500px] md:h-[700px]">
           <img
-            src="https://images.unsplash.com/photo-1758270705172-07b53627dfcb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaXZlcnNlJTIweW91dGglMjBncm91cCUyMGRpc2N1c3Npb258ZW58MXx8fHwxNzY1MzAxMTE2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+            src="/introduce.jpg"
             alt="청년들"
             className="w-full h-full object-cover"
           />
