@@ -157,11 +157,22 @@ export function Quote() {
         </div>
 
         <div className="relative h-[500px] md:h-[600px] overflow-hidden">
+          {/* 블러 처리된 배경 이미지 */}
+          <div
+            className="absolute inset-0 w-full h-full transition-all duration-500"
+            style={{
+              backgroundImage: `url(${current.image})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              filter: 'blur(20px)',
+              transform: 'scale(1.1)'
+            }}
+          />
+          {/* 메인 이미지 - 전체 보이기 */}
           <img
             src={current.image}
             alt={current.name}
-            className="w-full h-full object-cover transition-all duration-500"
-            style={{ objectPosition: current.imagePosition }}
+            className="relative w-full h-full object-contain transition-all duration-500 z-10"
           />
         </div>
       </div>
