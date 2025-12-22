@@ -3,49 +3,54 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const testimonials = [
   {
-    quote: "만약 한 단어로\n꽃보나보를 표현한다면,\n'힘이 되는'이에요",
-    content: "혼자가 아니라는 것을 느끼게 해주는 곳이에요. 같은 고민을 하는 또래들과 만나서 이야기를 나누고, 서로를 응원하는 공간이죠. 제 이야기를 들어주고, 저도 다른 사람들의 이야기를 들으면서 많은 힘을 얻었어요.",
-    name: "김지현",
+    quote: "민들레처럼\n어디서든 피어나는\n사람이 되고 싶어요",
+    content: "바람에 흩날려도 결국 뿌리를 내리는 민들레처럼, 저도 어떤 환경에서든 나만의 방식으로 성장하고 싶어요. 꽃보나보에서 그 용기를 배웠어요.",
+    name: "익명의 참여자",
     age: 24,
-    role: "마인드 코칭 & 커뮤니티 멤버",
-    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&auto=format&fit=crop&q=60",
-    bgColor: "#ff6b6b"
+    role: "마인드 프로필 참여자",
+    image: "/민들레.jpg",
+    imagePosition: "center 20%",
+    bgColor: "#f4a261"
   },
   {
-    quote: "나를 있는 그대로\n바라볼 수 있게\n도와준 곳이에요",
-    content: "항상 남들과 비교하며 살았는데, 꽃보나보에서 나만의 속도가 있다는 걸 깨달았어요. 코칭을 통해 제 강점을 발견하고, 스스로를 더 사랑하게 됐어요.",
-    name: "이서연",
+    quote: "나를 알아가는 게\n이렇게 설렐 줄\n몰랐어요",
+    content: "인마인드 검사를 통해 저와 어울리는 꽃이 무엇인지 알게 됐어요. 단순한 테스트가 아니라 나를 더 깊이 이해하는 시간이었죠. 이제 나만의 색깔이 뭔지 알 것 같아요.",
+    name: "최시우",
     age: 23,
-    role: "1:1 코칭 참여자",
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&auto=format&fit=crop&q=60",
-    bgColor: "#7b61ff"
+    role: "인마인드 검사 참여자",
+    image: "/최시우.jpg",
+    imagePosition: "center 10%",
+    bgColor: "#8080e0"
   },
   {
-    quote: "꿈을 향해 나아갈\n용기를 얻었어요",
-    content: "막연하게만 느껴졌던 꿈이 구체적인 목표가 됐어요. 워크숍에서 만난 분들과 서로의 꿈을 응원하면서, 포기하지 않고 도전할 수 있는 힘을 얻었어요.",
-    name: "박준호",
+    quote: "평범한 일상에서도\n의미를 찾을 수\n있게 됐어요",
+    content: "매일 반복되는 일상이 지루하게 느껴졌는데, Q&A를 통해 제 이야기를 나누면서 평범함 속에서도 특별함을 발견했어요. 제 일상이 누군가에게 위로가 될 수 있다니 놀라웠어요.",
+    name: "강요셉",
     age: 26,
-    role: "워크숍 참여자",
-    image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=800&auto=format&fit=crop&q=60",
-    bgColor: "#ffb3ba"
+    role: "매거진 Q&A 참여자",
+    image: "/강요셉.jpg",
+    imagePosition: "center 15%",
+    bgColor: "#d4727a"
   },
   {
-    quote: "진정한 나를\n발견하는 여정이었어요",
-    content: "매거진 인터뷰를 통해 제 이야기를 정리하면서, 그동안 몰랐던 저의 모습을 발견했어요. 누군가에게 힘이 될 수 있다는 것도 큰 보람이에요.",
-    name: "최민지",
+    quote: "인생이라는 여행에서\n잠시 쉬어가는\n곳을 찾았어요",
+    content: "빠르게 달려온 삶 속에서 잠시 멈춰 나를 돌아보는 시간이 필요했어요. 꽃보나보는 그런 쉼터 같은 곳이에요. 여기서 다시 힘을 얻어 다음 여정을 떠날 수 있어요.",
+    name: "익명의 참여자",
     age: 25,
-    role: "매거진 인터뷰 참여자",
-    image: "https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&auto=format&fit=crop&q=60",
+    role: "마인드 프로필 참여자",
+    image: "/인생이라는여행.jpg",
+    imagePosition: "center 60%",
     bgColor: "#6b8e6b"
   },
   {
-    quote: "함께라서\n더 멀리 갈 수 있어요",
-    content: "혼자였다면 금방 지쳤을 거예요. 꽃보나보에서 만난 동료들과 함께 성장하면서, 어려운 순간도 이겨낼 수 있었어요. 평생 함께할 친구들을 만났어요.",
-    name: "정승우",
+    quote: "나의 내면을\n기록하는 일은\n생각보다 소중해요",
+    content: "마인드프로필을 통해 나의 감정과 마음을 기록하면서, 그동안 외면했던 내 모습을 마주할 수 있었어요. 내적 프로필을 완성하고 나니 나 자신이 더 선명해졌어요.",
+    name: "김인혁",
     age: 27,
-    role: "토크콘서트 참여자",
-    image: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=800&auto=format&fit=crop&q=60",
-    bgColor: "#e8a87c"
+    role: "마인드 프로필 완료자",
+    image: "/김인혁.jpg",
+    imagePosition: "center top",
+    bgColor: "#5a7d9a"
   }
 ];
 
@@ -151,11 +156,12 @@ export function Quote() {
           </div>
         </div>
 
-        <div className="relative h-[500px] md:h-[600px]">
+        <div className="relative h-[500px] md:h-[600px] overflow-hidden">
           <img
             src={current.image}
             alt={current.name}
-            className="w-full h-full object-cover transition-opacity duration-500"
+            className="w-full h-full object-cover transition-all duration-500"
+            style={{ objectPosition: current.imagePosition }}
           />
         </div>
       </div>

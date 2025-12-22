@@ -40,20 +40,19 @@ export function Hero() {
         <h1 
           className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl mb-6" 
           style={{ 
-            color: '#f5f0e6',
-            textShadow: '1px 1px 2px rgba(120,120,120,0.25), -1px -1px 2px rgba(120,120,120,0.25), 1px -1px 2px rgba(120,120,120,0.25), -1px 1px 2px rgba(120,120,120,0.25), 0 2px 8px rgba(100,100,100,0.15)'
+            color: '#5a4a4a',
+            textShadow: '0 2px 4px rgba(255,255,255,0.5)'
           }}
         >
-          <span style={{ color: '#F7CAC9' }}>꽃</span>을 <span style={{ color: '#F7CAC9' }}>보</span>듯,
+          <span style={{ color: '#d4727a' }}>꽃</span>을 <span style={{ color: '#d4727a' }}>보</span>듯,
           <br />
-          <span style={{ color: '#F7CAC9' }}>나</span>를 <span style={{ color: '#F7CAC9' }}>보</span>다.
+          <span style={{ color: '#d4727a' }}>나</span>를 <span style={{ color: '#d4727a' }}>보</span>다.
         </h1>
         <p 
           className="text-xl md:text-2xl max-w-3xl mx-auto" 
           style={{ 
-            color: '#f5f0e6', 
-            opacity: 0.95,
-            textShadow: '1px 1px 2px rgba(120,120,120,0.2), -1px -1px 2px rgba(120,120,120,0.2), 1px -1px 2px rgba(120,120,120,0.2), -1px 1px 2px rgba(120,120,120,0.2)'
+            color: '#6a5a5a',
+            textShadow: '0 1px 2px rgba(255,255,255,0.5)'
           }}
         >
           20대 청년들의 성장과 이야기에 집중합니다
@@ -64,7 +63,7 @@ export function Hero() {
       <button
         onClick={scrollToMission}
         className="absolute bottom-12 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 group"
-        style={{ color: '#f5f0e6' }}
+        style={{ color: '#6a5a5a', textShadow: '0 1px 2px rgba(255,255,255,0.5)' }}
       >
         <span className="text-sm uppercase tracking-widest drop-shadow-md">더 알아보기</span>
         <ChevronDown 

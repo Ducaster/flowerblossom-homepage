@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 export function Header() {
@@ -22,13 +21,12 @@ export function Header() {
     }
   };
 
-  const textTone = isScrolled ? 'text-black' : 'text-white';
   const menuVisibility = isScrolled
     ? '-translate-y-6 opacity-0 pointer-events-none'
     : 'translate-y-0 opacity-100';
-  const textShadowStyle = isScrolled 
-    ? {} 
-    : { textShadow: '1px 1px 2px rgba(120,120,120,0.25), -1px -1px 2px rgba(120,120,120,0.25), 1px -1px 2px rgba(120,120,120,0.25), -1px 1px 2px rgba(120,120,120,0.25)' };
+  const navTextStyle = isScrolled 
+    ? { color: '#333' } 
+    : { color: '#5a4a4a', textShadow: '0 1px 2px rgba(255,255,255,0.5)' };
 
   return (
     <header
@@ -59,36 +57,39 @@ export function Header() {
           >
             <button
               onClick={() => scrollToSection('mission')}
-              className={`${textTone} hover:text-[#ff6b6b] transition-colors uppercase text-[15px] tracking-wide`}
-              style={textShadowStyle}
+              className="hover:text-[#d4727a] transition-colors uppercase text-[15px] tracking-wide font-medium"
+              style={navTextStyle}
             >
               Mission
             </button>
             <button
               onClick={() => scrollToSection('programs')}
-              className={`${textTone} hover:text-[#ff6b6b] transition-colors uppercase text-[15px] tracking-wide`}
-              style={textShadowStyle}
+              className="hover:text-[#d4727a] transition-colors uppercase text-[15px] tracking-wide font-medium"
+              style={navTextStyle}
             >
               Programs
             </button>
-            <Link
-              to="/programs"
-              className={`${textTone} hover:text-[#ff6b6b] transition-colors uppercase text-[15px] tracking-wide`}
-              style={textShadowStyle}
+            <a
+              href="https://flowerblossom-survey.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#d4727a] transition-colors uppercase text-[15px] tracking-wide font-medium"
+              style={navTextStyle}
             >
-              History
-            </Link>
+              Contents
+            </a>
             <button
               onClick={() => scrollToSection('getinvolved')}
-              className={`${textTone} hover:text-[#ff6b6b] transition-colors uppercase text-[15px] tracking-wide`}
-              style={textShadowStyle}
+              className="hover:text-[#d4727a] transition-colors uppercase text-[15px] tracking-wide font-medium"
+              style={navTextStyle}
             >
               Get Involved
             </button>
           </nav>
 
           <button
-            className={`md:hidden transition-all duration-500 ${menuVisibility} ${textTone}`}
+            className={`md:hidden transition-all duration-500 ${menuVisibility}`}
+            style={navTextStyle}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -99,29 +100,31 @@ export function Header() {
           <div className="md:hidden pb-6 space-y-4">
             <button
               onClick={() => scrollToSection('mission')}
-              className="block w-full text-left py-3 text-white hover:text-[#ff6b6b] transition-colors uppercase text-[15px] tracking-wide"
-              style={textShadowStyle}
+              className="block w-full text-left py-3 hover:text-[#d4727a] transition-colors uppercase text-[15px] tracking-wide font-medium"
+              style={navTextStyle}
             >
               Mission
             </button>
             <button
               onClick={() => scrollToSection('programs')}
-              className="block w-full text-left py-3 text-white hover:text-[#ff6b6b] transition-colors uppercase text-[15px] tracking-wide"
-              style={textShadowStyle}
+              className="block w-full text-left py-3 hover:text-[#d4727a] transition-colors uppercase text-[15px] tracking-wide font-medium"
+              style={navTextStyle}
             >
               Programs
             </button>
-            <Link
-              to="/programs"
-              className="block w-full text-left py-3 text-white hover:text-[#ff6b6b] transition-colors uppercase text-[15px] tracking-wide"
-              style={textShadowStyle}
+            <a
+              href="https://flowerblossom-survey.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full text-left py-3 hover:text-[#d4727a] transition-colors uppercase text-[15px] tracking-wide font-medium"
+              style={navTextStyle}
             >
-              History
-            </Link>
+              Contents
+            </a>
             <button
               onClick={() => scrollToSection('getinvolved')}
-              className="block w-full text-left py-3 text-white hover:text-[#ff6b6b] transition-colors uppercase text-[15px] tracking-wide"
-              style={textShadowStyle}
+              className="block w-full text-left py-3 hover:text-[#d4727a] transition-colors uppercase text-[15px] tracking-wide font-medium"
+              style={navTextStyle}
             >
               Get Involved
             </button>
