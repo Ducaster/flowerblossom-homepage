@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://flowerblossom-homepage.vercel.app/sitemap.xml
-
+Sitemap: https://www.flowerblossom.kr/sitemap.xml
