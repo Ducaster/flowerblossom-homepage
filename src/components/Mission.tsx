@@ -10,9 +10,9 @@ export function Mission() {
           />
         </div>
 
-        <div 
+        <div
           className="flex flex-col justify-center"
-          style={{ 
+          style={{
             backgroundColor: '#faf8f5',
             padding: '80px 60px 80px 80px'
           }}
@@ -20,12 +20,10 @@ export function Mission() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl text-gray-900 leading-tight font-bold" style={{ marginBottom: '40px' }}>
             Our mission
           </h2>
-          
+
           <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-            꽃보나보는 20대 청년들이 삶에서 필요한 기본적인 역량을 키우고, 
-            서로와 함께 성장할 수 있는 안전한 공간을 제공합니다. 
-            우리는 대화, 워크숍, 그리고 다양한 프로그램을 통해 
-            청년들이 자신만의 이야기를 되찾을 수 있도록 돕습니다.{' '}
+            꽃보나보는 "꽃을 보듯 나를 보다" 라는 줄임말로 "꽃같은 20대"라는 말에서 착안했습니다. <br /><br />
+            20대를 살아가는 모두가 스스로가 한 송이의 꽃임을 깨닫고 활짝 피었으면 하는 마음으로 20대 청년들의 이야기를 써내려가고 있습니다{' '}
             <button
               onClick={() => {
                 const element = document.getElementById('programs');

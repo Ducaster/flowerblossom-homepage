@@ -60,7 +60,7 @@ export function Header() {
               className="hover:text-[#d4727a] transition-colors uppercase text-[15px] tracking-wide font-medium"
               style={navTextStyle}
             >
-              Mission
+              Introduce
             </button>
             <button
               onClick={() => scrollToSection('programs')}
@@ -103,7 +103,7 @@ export function Header() {
               className="block w-full text-left py-3 hover:text-[#d4727a] transition-colors uppercase text-[15px] tracking-wide font-medium"
               style={navTextStyle}
             >
-              Mission
+              Introduce
             </button>
             <button
               onClick={() => scrollToSection('programs')}
